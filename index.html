@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<body>
+        <div id="sumLabel"></div>
+        <button onClick="onCount('COUNT');">Count</button>
+        
+        <div id="countLabel"></div>
+        <script>
+                window.onload = function () {
+                        onSum(1, 2).then(function (res) {
+                                document.getElementById('sumLabel').innerHTML = `SUM(1,2) = ${res}`;
+                        });
+                };
+                function notify(text) {
+                        console.log(`Called from Golang: ${text} `);
+                }
+        </script>
+</body>
+
+</html>
